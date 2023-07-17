@@ -15,7 +15,6 @@
       matchPackagePrefixes: '@types/',
       matchUpdateTypes: ['patch', 'minor'],
       groupName: 'DefinitelyTyped types (non-major)',
-      extends: ['schedule:weekly'],
       addLabels: ['typescript'],
     },
   ],
