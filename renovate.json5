@@ -1,0 +1,22 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:base',
+    ':dependencyDashboard',
+    ':labels(dependencies)',
+  ],
+  packageRules: [
+    {
+      "packagePatterns": ["*"],
+      "enabled": false
+    },
+    {
+      enabled: true,
+      matchPackagePrefixes: '@types/',
+      matchUpdateTypes: ['patch', 'minor'],
+      groupName: 'DefinitelyTyped types (non-major)',
+      extends: ['schedule:weekly'],
+      addLabels: ['typescript'],
+    },
+  ],
+}
