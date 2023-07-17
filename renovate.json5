@@ -7,8 +7,9 @@
   ],
   packageRules: [
     {
-      "packagePatterns": ["*"],
-      "enabled": false
+      matchPackagePatterns: ["*"],
+      excludePackagePatterns: '@types/',
+      enabled: false
     },
     {
       enabled: true,
