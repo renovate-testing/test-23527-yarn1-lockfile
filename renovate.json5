@@ -7,16 +7,9 @@
   ],
   packageRules: [
     {
-      matchPackagePatterns: ["*"],
-      excludePackagePatterns: '@types/',
+      matchPackagePatterns: [".*"],
+      excludePackagePatterns: ["@types"],
       enabled: false
-    },
-    {
-      enabled: true,
-      matchPackagePrefixes: '@types/',
-      matchUpdateTypes: ['patch', 'minor'],
-      groupName: 'DefinitelyTyped types (non-major)',
-      addLabels: ['typescript'],
-    },
+    }
   ],
 }
