@@ -7,9 +7,21 @@
   ],
   packageRules: [
     {
-      matchPackagePatterns: [".*"],
-      excludePackagePatterns: ["@types"],
+      matchPackagePatterns: ["*"],
+      excludePackagePatterns: '@types/',
       enabled: false
-    }
+    },
+    {
+      enabled: false,
+      matchPackagePrefixes: '@types/',
+      matchUpdateTypes: ["major", "pin", "pinDigest", "digest", "lockFileMaintenance", "rollback", "bump", "replacement"],
+    },
+    {
+      enabled: true,
+      matchPackagePrefixes: '@types/',
+      matchUpdateTypes: ['patch', 'minor'],
+      groupName: 'DefinitelyTyped types (non-major)',
+      addLabels: ['typescript'],
+    },
   ],
 }
